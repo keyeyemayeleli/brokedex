@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="pokedex.js"></script>
+<!--<script src="sliders.js"></script>-->
+<br><br>
+
+
+  <div id="filter">
+    <b>Species Filter:</b><br>
+    <input name='v' value="Normal" type="checkbox" checked>Normal</input><br>
+    <input name="v" value="Fighting" type="checkbox" checked>Fighting</input><br>
+    <input name="v" value="Flying" type="checkbox" checked>Flying</input><br>
+    <input name="v" value="Poison" type="checkbox" checked>Poison</input><br>
+    <input name="v" value="Ground" type="checkbox" checked>Ground</input><br>
+    <input name="v" value="Rock" type="checkbox" checked>Rock</input><br>
+    <input name="v" value="Bug" type="checkbox" checked>Bug</input><br>
+    <input name="v" value="Ghost" type="checkbox" checked>Ghost</input><br>
+    <input name="v" value="Steel" type="checkbox" checked>Steel</input><br>
+    <input name="v" value="Fire" type="checkbox" checked>Fire</input><br>
+    <input name="v" value="Water" type="checkbox" checked>Water</input><br>
+    <input name="v" value="Grass" type="checkbox" checked>Grass</input><br>
+    <input name="v" value="Electric" type="checkbox" checked>Electric</input><br>
+    <input name="v" value="Psychic" type="checkbox" checked>Psychic</input><br>
+    <input name="v" value="Ice" type="checkbox" checked>Ice</input><br>
+    <input name="v" value="Dragon" type="checkbox" checked>Dragon</input><br>
+    <input name="v" value="Dark" type="checkbox" checked>Dark</input><br>
+    <input name="v" value="Fairy" type="checkbox" checked>Fairy</input><br>
+  </div>
+
+
+  <select name="xAX" id="xAXs">
+        <option selected="selected"value ="hp">HP</option>
+        <option value ="attack">Attack</option>
+        <option value ="defense">Defense</option>
+        <option value = "special_attack">Special Attack</option>
+        <option value = "special_defense">Special Defense</option>
+        <option value ="speed">Speed</option>
+  </select>
+
+
+  <select name="yAX" id="yAXs">
+        <option value ="hp">HP</option>
+        <option selected="selected" value ="attack">Attack</option>
+        <option value ="defense">Defense</option>
+        <option value = "special_attack">Special Attack</option>
+        <option value = "special_defense">Special Defense</option>
+        <option value ="speed">Speed</option>
+  </select>  
+
+  <br>
+<div id="sliders">
+  <div class="slider1">
+  </div>
+</div>
+
+</body>
