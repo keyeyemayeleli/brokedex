@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="BROKEDEX" src="...">
+      </a>
+    </div>
+  </div>
+</nav>
+<script src="jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<!--<script src="sliders.js"></script>-->
+<br><br>
+
+<div id="graph" class="col-sm-10"></div>
+<div id="right" class="col-sm-2">
+  <div id="filter">
+    <b>Species Filter:</b><br>
+    <div class="col-sm-6">
+    <input class="checkbox1" name='v' value="Normal" type="checkbox" checked>Normal</input><br>
+    <input class="checkbox1" name="v" value="Fighting" type="checkbox" checked>Fighting</input><br>
+    <input class="checkbox1" name="v" value="Flying" type="checkbox" checked>Flying</input><br>
+    <input class="checkbox1" name="v" value="Poison" type="checkbox" checked>Poison</input><br>
+    <input class="checkbox1" name="v" value="Ground" type="checkbox" checked>Ground</input><br>
+    <input class="checkbox1" name="v" value="Rock" type="checkbox" checked>Rock</input><br>
+    <input class="checkbox1" name="v" value="Bug" type="checkbox" checked>Bug</input><br>
+    <input class="checkbox1" name="v" value="Ghost" type="checkbox" checked>Ghost</input><br>
+    <input class="checkbox1" name="v" value="Steel" type="checkbox" checked>Steel</input><br>
+    </div>
+    <div class="col-sm-6">
+    <input name="v" value="Fire" type="checkbox" checked>Fire</input><br>
+    <input name="v" value="Water" type="checkbox" checked>Water</input><br>
+    <input name="v" value="Grass" type="checkbox" checked>Grass</input><br>
+    <input name="v" value="Electric" type="checkbox" checked>Electric</input><br>
+    <input name="v" value="Psychic" type="checkbox" checked>Psychic</input><br>
+    <input name="v" value="Ice" type="checkbox" checked>Ice</input><br>
+    <input name="v" value="Dragon" type="checkbox" checked>Dragon</input><br>
+    <input name="v" value="Dark" type="checkbox" checked>Dark</input><br>
+    <input name="v" value="Fairy" type="checkbox" checked>Fairy</input><br>
+    <input type="checkbox" id="selectall">Select all</input><br>
+    </div>
+  </div>
+
+  <b>X axis:</b><br>
+  <select class="form-control" name="xAX" id="xAXs">
+        <option selected="selected"value ="hp">HP</option>
+        <option value ="attack">Attack</option>
+        <option value ="defense">Defense</option>
+        <option value = "special_attack">Special Attack</option>
+        <option value = "special_defense">Special Defense</option>
+        <option value ="speed">Speed</option>
+  </select><br>
+  <b>Y axis:</b><br>
+  <select class="form-control" name="yAX" id="yAXs">
+        <option value ="hp">HP</option>
+        <option selected="selected" value ="attack">Attack</option>
+        <option value ="defense">Defense</option>
+        <option value = "special_attack">Special Attack</option>
+        <option value = "special_defense">Special Defense</option>
+        <option value ="speed">Speed</option>
+  </select> 
+
+</div>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script src="pokedex.js"></script>
+<script>
+$(document).ready(function() {
+    $('#selecctall').click(function(event) {  //on click 
+        if(this.checked) { // check select status
+            $('.checkbox1').each(function() { //loop through each checkbox
+                this.checked = true;  //select all checkboxes with class "checkbox1"               
+            });
+        }else{
+            $('.checkbox1').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+            });         
+        }
+    });
+    
+});
+</script>
+</body>
